@@ -1,47 +1,90 @@
 {
-  "/book/docs-a9f": {
-    "__comp": "5e95c892",
+  "/book/__docusaurus/debug-f31": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
     "__context": {
-      "plugin": "aba21aa0"
+      "plugin": "plugin---book-docusaurus-debugb-38-709"
+    }
+  },
+  "/book/__docusaurus/debug/config-140": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---book-docusaurus-debugb-38-709"
+    }
+  },
+  "/book/__docusaurus/debug/content-da6": {
+    "__comp": "__comp---theme-debug-contentba-8-ce7",
+    "__context": {
+      "plugin": "plugin---book-docusaurus-debugb-38-709"
+    },
+    "__props": "__props---book-docusaurus-debug-contentae-3-528"
+  },
+  "/book/__docusaurus/debug/globalData-58b": {
+    "__comp": "__comp---theme-debug-global-dataede-0fa",
+    "__context": {
+      "plugin": "plugin---book-docusaurus-debugb-38-709"
+    }
+  },
+  "/book/__docusaurus/debug/metadata-ae0": {
+    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
+    "__context": {
+      "plugin": "plugin---book-docusaurus-debugb-38-709"
+    }
+  },
+  "/book/__docusaurus/debug/registry-a8a": {
+    "__comp": "__comp---theme-debug-registry-679-501",
+    "__context": {
+      "plugin": "plugin---book-docusaurus-debugb-38-709"
+    }
+  },
+  "/book/__docusaurus/debug/routes-a5a": {
+    "__comp": "__comp---theme-debug-routes-946-699",
+    "__context": {
+      "plugin": "plugin---book-docusaurus-debugb-38-709"
+    }
+  },
+  "/book/docs-a9f": {
+    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__context": {
+      "plugin": "plugin---book-docsaba-f31"
     }
   },
   "/book/docs-ad1": {
-    "__comp": "a7bd4aaa",
-    "__props": "3d838edc"
+    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
+    "__props": "__props---book-docs-3-d-8-5d0"
   },
   "/book/docs-a28": {
-    "__comp": "a94703ab"
+    "__comp": "__comp---theme-doc-roota-94-67a"
   },
   "/book/docs/chapter-1-getting-started-518": {
-    "__comp": "17896441",
-    "content": "656a3e68"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---book-docs-chapter-1-getting-started-656-75d"
   },
   "/book/docs/chapter-2-architecture-758": {
-    "__comp": "17896441",
-    "content": "4265de0d"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---book-docs-chapter-2-architecture-426-99f"
   },
   "/book/docs/chapter-3-frontend-9ff": {
-    "__comp": "17896441",
-    "content": "24fa4bfd"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---book-docs-chapter-3-frontend-24-f-bc7"
   },
   "/book/docs/chapter-4-backend-597": {
-    "__comp": "17896441",
-    "content": "7b04e911"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---book-docs-chapter-4-backend-7-b-0-9ff"
   },
   "/book/docs/chapter-5-rag-pipeline-d5c": {
-    "__comp": "17896441",
-    "content": "215418c4"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---book-docs-chapter-5-rag-pipeline-215-7b5"
   },
   "/book/docs/chapter-6-deployment-4fe": {
-    "__comp": "17896441",
-    "content": "53ad3d85"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---book-docs-chapter-6-deployment-53-a-c3d"
   },
   "/book/docs/intro-317": {
-    "__comp": "17896441",
-    "content": "0e384e19"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---book-docs-intro-0-e-3-177"
   },
   "/book/docs/rag-chatbot/-706": {
-    "__comp": "17896441",
-    "content": "1b98fe62"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---book-docs-rag-chatbot-1-b-9-7aa"
   }
 }
