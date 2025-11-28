@@ -6,7 +6,7 @@ Spec: 001
 
 ---
 
-1. **Initialize repository & constitution** — owner: dev  
+1. [X] **Initialize repository & constitution** — owner: dev  
    - Prereqs: none  
    - Success: `.specify/memory/constitution.md` exists; repo has `book/`, `backend/`, `specs/`, `plans/`, `tasks/`, `checklist/` folders.  
    - Commands:

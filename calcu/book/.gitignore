@@ -1,0 +1,34 @@
+.env
+__pycache__/
+node_modules/
+.vscode/
+.DS_Store
+.build/
+build/
+
+# Python
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# Node.js
+*.log
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Environment
+.env*
+
+# IDE/OS
+Thumbs.db
+*.tmp
+*.swp
+.idea/
+
+# Docker
+Dockerfile*
+.dockerignore
+*.log*
+coverage/
