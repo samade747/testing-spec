@@ -1,0 +1,27 @@
+{
+  "id": "chapter-6-deployment",
+  "title": "Chapter 6: Deployment and CI/CD",
+  "description": "The final chapter covers deploying our Docusaurus book and FastAPI backend. We'll set up CI/CD pipelines using GitHub Actions for automated deployment.",
+  "source": "@site/docs/chapter-6-deployment.md",
+  "sourceDirName": ".",
+  "slug": "/chapter-6-deployment",
+  "permalink": "/book/docs/chapter-6-deployment",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-6-deployment.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "sidebar_position": 7
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 5: Building the RAG Pipeline",
+    "permalink": "/book/docs/chapter-5-rag-pipeline"
+  },
+  "next": {
+    "title": "RAG Chatbot Integration",
+    "permalink": "/book/docs/rag-chatbot/"
+  }
+}

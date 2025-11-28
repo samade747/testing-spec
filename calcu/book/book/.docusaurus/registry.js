@@ -1,0 +1,15 @@
+export default {
+  "0e384e19": [() => import(/* webpackChunkName: "0e384e19" */ "@site/docs/intro.md"), "@site/docs/intro.md", require.resolveWeak("@site/docs/intro.md")],
+  "17896441": [() => import(/* webpackChunkName: "17896441" */ "@theme/DocItem"), "@theme/DocItem", require.resolveWeak("@theme/DocItem")],
+  "1b98fe62": [() => import(/* webpackChunkName: "1b98fe62" */ "@site/docs/rag-chatbot/index.md"), "@site/docs/rag-chatbot/index.md", require.resolveWeak("@site/docs/rag-chatbot/index.md")],
+  "215418c4": [() => import(/* webpackChunkName: "215418c4" */ "@site/docs/chapter-5-rag-pipeline.md"), "@site/docs/chapter-5-rag-pipeline.md", require.resolveWeak("@site/docs/chapter-5-rag-pipeline.md")],
+  "24fa4bfd": [() => import(/* webpackChunkName: "24fa4bfd" */ "@site/docs/chapter-3-frontend.md"), "@site/docs/chapter-3-frontend.md", require.resolveWeak("@site/docs/chapter-3-frontend.md")],
+  "3d838edc": [() => import(/* webpackChunkName: "3d838edc" */ "@generated/docusaurus-plugin-content-docs/default/p/book-docs-1b1.json"), "@generated/docusaurus-plugin-content-docs/default/p/book-docs-1b1.json", require.resolveWeak("@generated/docusaurus-plugin-content-docs/default/p/book-docs-1b1.json")],
+  "4265de0d": [() => import(/* webpackChunkName: "4265de0d" */ "@site/docs/chapter-2-architecture.md"), "@site/docs/chapter-2-architecture.md", require.resolveWeak("@site/docs/chapter-2-architecture.md")],
+  "53ad3d85": [() => import(/* webpackChunkName: "53ad3d85" */ "@site/docs/chapter-6-deployment.md"), "@site/docs/chapter-6-deployment.md", require.resolveWeak("@site/docs/chapter-6-deployment.md")],
+  "5e95c892": [() => import(/* webpackChunkName: "5e95c892" */ "@theme/DocsRoot"), "@theme/DocsRoot", require.resolveWeak("@theme/DocsRoot")],
+  "656a3e68": [() => import(/* webpackChunkName: "656a3e68" */ "@site/docs/chapter-1-getting-started.md"), "@site/docs/chapter-1-getting-started.md", require.resolveWeak("@site/docs/chapter-1-getting-started.md")],
+  "7b04e911": [() => import(/* webpackChunkName: "7b04e911" */ "@site/docs/chapter-4-backend.md"), "@site/docs/chapter-4-backend.md", require.resolveWeak("@site/docs/chapter-4-backend.md")],
+  "a7bd4aaa": [() => import(/* webpackChunkName: "a7bd4aaa" */ "@theme/DocVersionRoot"), "@theme/DocVersionRoot", require.resolveWeak("@theme/DocVersionRoot")],
+  "a94703ab": [() => import(/* webpackChunkName: "a94703ab" */ "@theme/DocRoot"), "@theme/DocRoot", require.resolveWeak("@theme/DocRoot")],
+  "aba21aa0": [() => import(/* webpackChunkName: "aba21aa0" */ "@generated/docusaurus-plugin-content-docs/default/__plugin.json"), "@generated/docusaurus-plugin-content-docs/default/__plugin.json", require.resolveWeak("@generated/docusaurus-plugin-content-docs/default/__plugin.json")],};

@@ -1,0 +1,68 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/book/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/book/docs",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "chapter-1-getting-started",
+              "path": "/book/docs/chapter-1-getting-started",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-2-architecture",
+              "path": "/book/docs/chapter-2-architecture",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-3-frontend",
+              "path": "/book/docs/chapter-3-frontend",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-4-backend",
+              "path": "/book/docs/chapter-4-backend",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-5-rag-pipeline",
+              "path": "/book/docs/chapter-5-rag-pipeline",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "chapter-6-deployment",
+              "path": "/book/docs/chapter-6-deployment",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/book/docs/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "rag-chatbot/index",
+              "path": "/book/docs/rag-chatbot/",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/book/docs/intro",
+                "label": "intro"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

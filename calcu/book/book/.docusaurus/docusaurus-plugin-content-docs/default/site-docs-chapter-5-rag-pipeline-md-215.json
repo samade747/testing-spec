@@ -1,0 +1,27 @@
+{
+  "id": "chapter-5-rag-pipeline",
+  "title": "Chapter 5: Building the RAG Pipeline",
+  "description": "Dive deep into the core of the RAG chatbot: the pipeline. This chapter explains how to chunk documents, generate embeddings, and store them in a vector database like Qdrant.",
+  "source": "@site/docs/chapter-5-rag-pipeline.md",
+  "sourceDirName": ".",
+  "slug": "/chapter-5-rag-pipeline",
+  "permalink": "/book/docs/chapter-5-rag-pipeline",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-5-rag-pipeline.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "sidebar_position": 6
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 4: Backend Development with FastAPI",
+    "permalink": "/book/docs/chapter-4-backend"
+  },
+  "next": {
+    "title": "Chapter 6: Deployment and CI/CD",
+    "permalink": "/book/docs/chapter-6-deployment"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "rag-chatbot/index",
+  "title": "RAG Chatbot Integration",
+  "description": "This section details the integration of the RAG chatbot into the Docusaurus book. We'll cover the frontend components and how they communicate with the backend.",
+  "source": "@site/docs/rag-chatbot/index.md",
+  "sourceDirName": "rag-chatbot",
+  "slug": "/rag-chatbot/",
+  "permalink": "/book/docs/rag-chatbot/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/rag-chatbot/index.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "sidebar_position": 8
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 6: Deployment and CI/CD",
+    "permalink": "/book/docs/chapter-6-deployment"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "intro",
+  "title": "Introduction to Spec-Driven AI",
+  "description": "Welcome to the Spec-Driven AI Book. This book will guide you through building an AI-powered application using a spec-driven development approach. You'll learn how to define your requirements clearly, design your architecture, and implement a robust solution.",
+  "source": "@site/docs/intro.md",
+  "sourceDirName": ".",
+  "slug": "/intro",
+  "permalink": "/book/docs/intro",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/intro.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "Chapter 1: Getting Started with Spec-Driven Development",
+    "permalink": "/book/docs/chapter-1-getting-started"
+  }
+}

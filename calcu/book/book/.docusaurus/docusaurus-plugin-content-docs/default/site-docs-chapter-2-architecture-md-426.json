@@ -1,0 +1,27 @@
+{
+  "id": "chapter-2-architecture",
+  "title": "Chapter 2: Architecture Design for RAG Chatbots",
+  "description": "This chapter delves into the architectural considerations for building a Retrieval-Augmented Generation (RAG) chatbot. We'll discuss the different components and how they interact.",
+  "source": "@site/docs/chapter-2-architecture.md",
+  "sourceDirName": ".",
+  "slug": "/chapter-2-architecture",
+  "permalink": "/book/docs/chapter-2-architecture",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-2-architecture.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 1: Getting Started with Spec-Driven Development",
+    "permalink": "/book/docs/chapter-1-getting-started"
+  },
+  "next": {
+    "title": "Chapter 3: Frontend Development with Docusaurus and React",
+    "permalink": "/book/docs/chapter-3-frontend"
+  }
+}

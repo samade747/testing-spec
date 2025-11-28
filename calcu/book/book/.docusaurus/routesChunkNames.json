@@ -1,0 +1,47 @@
+{
+  "/book/docs-a9f": {
+    "__comp": "5e95c892",
+    "__context": {
+      "plugin": "aba21aa0"
+    }
+  },
+  "/book/docs-ad1": {
+    "__comp": "a7bd4aaa",
+    "__props": "3d838edc"
+  },
+  "/book/docs-a28": {
+    "__comp": "a94703ab"
+  },
+  "/book/docs/chapter-1-getting-started-518": {
+    "__comp": "17896441",
+    "content": "656a3e68"
+  },
+  "/book/docs/chapter-2-architecture-758": {
+    "__comp": "17896441",
+    "content": "4265de0d"
+  },
+  "/book/docs/chapter-3-frontend-9ff": {
+    "__comp": "17896441",
+    "content": "24fa4bfd"
+  },
+  "/book/docs/chapter-4-backend-597": {
+    "__comp": "17896441",
+    "content": "7b04e911"
+  },
+  "/book/docs/chapter-5-rag-pipeline-d5c": {
+    "__comp": "17896441",
+    "content": "215418c4"
+  },
+  "/book/docs/chapter-6-deployment-4fe": {
+    "__comp": "17896441",
+    "content": "53ad3d85"
+  },
+  "/book/docs/intro-317": {
+    "__comp": "17896441",
+    "content": "0e384e19"
+  },
+  "/book/docs/rag-chatbot/-706": {
+    "__comp": "17896441",
+    "content": "1b98fe62"
+  }
+}

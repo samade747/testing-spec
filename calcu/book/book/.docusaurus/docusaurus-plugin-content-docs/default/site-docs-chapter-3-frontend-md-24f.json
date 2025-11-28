@@ -1,0 +1,27 @@
+{
+  "id": "chapter-3-frontend",
+  "title": "Chapter 3: Frontend Development with Docusaurus and React",
+  "description": "Learn how to build the user interface for our AI book using Docusaurus and React. This chapter covers the setup of the Docusaurus project and the creation of custom React components.",
+  "source": "@site/docs/chapter-3-frontend.md",
+  "sourceDirName": ".",
+  "slug": "/chapter-3-frontend",
+  "permalink": "/book/docs/chapter-3-frontend",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-3-frontend.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 2: Architecture Design for RAG Chatbots",
+    "permalink": "/book/docs/chapter-2-architecture"
+  },
+  "next": {
+    "title": "Chapter 4: Backend Development with FastAPI",
+    "permalink": "/book/docs/chapter-4-backend"
+  }
+}

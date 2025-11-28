@@ -1,0 +1,8 @@
+/**
+ * Any CSS placed here will be applied to all pages of Docusaurus.
+ */
+
+/* For example, you can change the main text color: */
+body {
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
