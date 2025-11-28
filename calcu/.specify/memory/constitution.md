@@ -1,8 +1,7 @@
 # [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
-
+<!-- Example: Spec Constitution, TaskFlow Constitution, etc. 
 ## Core Principles
-
+ 
 ### [PRINCIPLE_1_NAME]
 <!-- Example: I. Library-First -->
 [PRINCIPLE_1_DESCRIPTION]
