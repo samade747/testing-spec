@@ -15,6 +15,18 @@ const config = {
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/book/',
 
+/*
+  devServer: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8000',
+        pathRewrite: { '^/api': '' },
+        changeOrigin: true,
+      },
+    },
+  },
+*/
+
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'facebook', // Usually your GitHub org/user name.
@@ -49,6 +61,10 @@ const config = {
         },
       }),
     ],
+  ],
+
+  plugins: [
+    require.resolve('./plugins/webpack-proxy-plugin'),
   ],
 
 

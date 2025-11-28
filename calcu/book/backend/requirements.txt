@@ -1,5 +1,5 @@
-fastapi==0.104.1
-uvicorn==0.23.2
-python-dotenv==1.0.0
-openai==1.16.0
-qdrant-client==1.16.1
+fastapi
+uvicorn
+python-dotenv
+openai
+qdrant-client

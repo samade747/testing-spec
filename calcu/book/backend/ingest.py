@@ -10,15 +10,15 @@ from typing import List, Dict
 load_dotenv()
 
 # Configuration
-QDRANT_URL = os.getenv("QDRANT_URL")
+QDRANT_HOST = os.getenv("QDRANT_HOST")
 QDRANT_API_KEY = os.getenv("QDRANT_API_KEY")
 QDRANT_COLLECTION_NAME = os.getenv("QDRANT_COLLECTION_NAME", "calcu_book")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-BOOK_DOCS_PATH = "./book/docs" # Path relative to backend/
+BOOK_DOCS_PATH = "../book/docs" # Path relative to backend/
 
 # Initialize clients (will fail if dependencies are not installed)
 try:
-    client = QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY)
+    client = QdrantClient(url=QDRANT_HOST, api_key=QDRANT_API_KEY)
     openai_client = OpenAI(api_key=OPENAI_API_KEY)
 except Exception as e:
     print(f"Failed to initialize clients. Ensure Qdrant and OpenAI dependencies are installed and environment variables are set: {e}")

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "docusaurus start",
+    "start": "cross-env NODE_OPTIONS=--max-old-space-size=8192 docusaurus start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
@@ -26,6 +26,7 @@
     "@docusaurus/module-type-aliases": "^3.9.2",
     "@docusaurus/tsconfig": "^3.9.2",
     "@docusaurus/types": "^3.9.2",
+    "cross-env": "^10.1.0",
     "typescript": "^5.2.2"
   },
   "browserslist": {
@@ -42,6 +43,5 @@
   },
   "engines": {
     "node": ">=18.0"
-  },
-  "proxy": "http://localhost:8000"
+  }
 }
