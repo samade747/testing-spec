@@ -1,7 +1,6 @@
-fastapi
-uvicorn[standard]
-qdrant-client
-openai
-python-dotenv
-markdown-it-py
-requests
+fastapi==0.104.1
+uvicorn==0.23.2
+pydantic==2.5.2
+python-dotenv==1.0.0
+openai==1.16.0
+qdrant-client==1.16.1

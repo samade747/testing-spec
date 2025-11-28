@@ -1,0 +1,143 @@
+/* book/book/src/components/ChatWidget.module.css */
+
+.chatContainer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  font-family: sans-serif;
+}
+
+.chatToggle {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.chatWindow {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 350px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  margin-top: 10px;
+}
+
+.chatHeader {
+  background-color: #f0f2f5;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  text-align: center;
+}
+
+.chatHeader h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.chatBody {
+  flex-grow: 1;
+  padding: 15px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #eee;
+}
+
+.chatInputForm {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #eee;
+}
+
+.chatInput {
+  flex-grow: 1;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.chatInput:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.chatSendButton {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.chatSendButton:disabled {
+  background-color: #90ee90;
+  cursor: not-allowed;
+}
+
+.response {
+  background-color: #e9f7ef;
+  border-left: 3px solid #28a745;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.response h4 {
+  margin-top: 0;
+  color: #28a745;
+}
+
+.response p {
+  margin-bottom: 5px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.contexts {
+  margin-top: 10px;
+  border-top: 1px solid #d4edda;
+  padding-top: 10px;
+}
+
+.contexts h5 {
+  margin-top: 0;
+  color: #28a745;
+}
+
+.contexts ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+}
+
+.contexts li {
+  background-color: #f0fff4;
+  border: 1px solid #c3e6cb;
+  padding: 5px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+}
+
+.error {
+  color: #dc3545;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  padding: 10px;
+  border-radius: 4px;
+}

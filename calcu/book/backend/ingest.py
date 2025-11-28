@@ -1,65 +1,132 @@
-# ingest.py
-import os, glob, uuid
-from qdrant_client import QdrantClient
-from qdrant_client.http import models as rest
-import openai
-from markdown_it import MarkdownIt
+import os
+import glob
 from dotenv import load_dotenv
+from qdrant_client import QdrantClient
+from qdrant_client.models import PointStruct, Distance, VectorParams
+from openai import OpenAI
+from typing import List, Dict
 
+# Load environment variables
 load_dotenv()
 
-OPENAI_KEY = os.getenv("OPENAI_API_KEY")
+# Configuration
 QDRANT_URL = os.getenv("QDRANT_URL")
-QDRANT_KEY = os.getenv("QDRANT_API_KEY")
-COLL = "calcu_book"
+QDRANT_API_KEY = os.getenv("QDRANT_API_KEY")
+QDRANT_COLLECTION_NAME = os.getenv("QDRANT_COLLECTION_NAME", "calcu_book")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+BOOK_DOCS_PATH = "../book/docs" # Path relative to backend/
 
-openai.api_key = OPENAI_KEY
-client = QdrantClient(url=QDRANT_URL, api_key=QDRANT_KEY)
+# Initialize clients (will fail if dependencies are not installed)
+try:
+    client = QdrantClient(host=QDRANT_URL, api_key=QDRANT_API_KEY)
+    openai_client = OpenAI(api_key=OPENAI_API_KEY)
+except Exception as e:
+    print(f"Failed to initialize clients. Ensure Qdrant and OpenAI dependencies are installed and environment variables are set: {e}")
+    client = None
+    openai_client = None
 
-# create collection
-collections = [c.name for c in client.get_collections().collections]
-if COLL not in collections:
-    client.recreate_collection(
-        collection_name=COLL,
-        vectors_config=rest.VectorParams(size=1536, distance=rest.Distance.COSINE),
-    )
+def get_markdown_files(path: str) -> List[str]:
+    """Recursively gets all markdown files from a given path."""
+    return glob.glob(os.path.join(path, '**/*.md'), recursive=True)
 
-md = MarkdownIt()
-def chunk_text(text, chunk_size=400, overlap=50):
+def chunk_text(text: str, file_path: str, chunk_size: int = 1000, chunk_overlap: int = 200) -> List[Dict]:
+    """
+    Splits text into chunks. This is a very basic chunker;
+    a more sophisticated one would handle code blocks, headings, etc.
+    """
+    # Placeholder for more advanced chunking logic
+    chunks = []
+    current_chunk = ""
     words = text.split()
-    chunks=[]
-    i=0
-    while i < len(words):
-        chunk = " ".join(words[i:i+chunk_size])
-        chunks.append(chunk)
-        i += chunk_size - overlap
+    
+    for word in words:
+        if len(current_chunk) + len(word) + 1 > chunk_size:
+            chunks.append({"text": current_chunk, "source": file_path})
+            current_chunk = word
+        else:
+            current_chunk += (" " if current_chunk else "") + word
+    if current_chunk:
+        chunks.append({"text": current_chunk, "source": file_path})
     return chunks
 
-def embed_text(text):
-    r = openai.Embedding.create(model="text-embedding-3-large", input=text)
-    return r['data'][0]['embedding']
+def get_embeddings(text: str) -> List[float]:
+    """Generates OpenAI embeddings for a given text."""
+    if not openai_client:
+        print("OpenAI client not initialized. Cannot generate embeddings.")
+        return []
+    try:
+        response = openai_client.embeddings.create(
+            input=text,
+            model="text-embedding-ada-002" # Or other suitable model
+        )
+        return response.data[0].embedding
+    except Exception as e:
+        print(f"Error generating embeddings: {e}")
+        return []
 
-def upsert_points(points):
-    client.upsert(
-        collection_name=COLL,
-        points=points
-    )
+def upsert_to_qdrant(chunks: List[Dict]):
+    """Upserts chunks and their embeddings to Qdrant."""
+    if not client:
+        print("Qdrant client not initialized. Cannot upsert data.")
+        return
 
-base = os.path.join(os.path.dirname(__file__), "../book/docs")
-paths = glob.glob(os.path.join(base, "**/*.md"), recursive=True)
-points=[]
-for path in paths:
-    with open(path, 'r', encoding='utf-8') as f:
-        raw = f.read()
-    plain = md.render(raw)
-    chunks = chunk_text(plain)
-    for idx, c in enumerate(chunks):
-        emb = embed_text(c)
-        payload = {"source": os.path.relpath(path, base), "chunk_index": idx, "text": c}
-        points.append({"id": str(uuid.uuid4()), "vector": emb, "payload": payload})
-        if len(points) >= 64:
-            upsert_points(points)
-            points=[]
-if points:
-    upsert_points(points)
-print("Ingest complete. Indexed docs:", len(paths))
+    # Ensure collection exists and has correct vector parameters
+    try:
+        client.recreate_collection(
+            collection_name=QDRANT_COLLECTION_NAME,
+            vectors_config=VectorParams(size=1536, distance=Distance.COSINE) # size depends on embedding model
+        )
+    except Exception as e:
+        print(f"Could not recreate collection (might already exist or API key issue): {e}")
+        # Attempt to get collection info to check if it already exists or if there's an auth error
+        try:
+            client.get_collection(collection_name=QDRANT_COLLECTION_NAME)
+        except Exception as get_e:
+            print(f"Failed to get collection info, potential Qdrant configuration issue: {get_e}")
+            return
+    
+    points = []
+    for i, chunk in enumerate(chunks):
+        embedding = get_embeddings(chunk["text"])
+        if embedding:
+            points.append(
+                PointStruct(
+                    id=f"{chunk['source']}-{i}", # Unique ID for each chunk
+                    vector=embedding,
+                    payload={"source": chunk["source"], "chunk_index": i, "text": chunk["text"]}
+                )
+            )
+    
+    if points:
+        try:
+            client.upsert(
+                collection_name=QDRANT_COLLECTION_NAME,
+                wait=True,
+                points=points
+            )
+            print(f"Upserted {len(points)} points to Qdrant collection '{QDRANT_COLLECTION_NAME}'.")
+        except Exception as e:
+            print(f"Error upserting points to Qdrant: {e}")
+    else:
+        print("No points to upsert.")
+
+def main():
+    print("Starting data ingestion process...")
+    markdown_files = get_markdown_files(BOOK_DOCS_PATH)
+    all_chunks = []
+    for file_path in markdown_files:
+        print(f"Processing file: {file_path}")
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        chunks = chunk_text(content, file_path)
+        all_chunks.extend(chunks)
+    
+    if all_chunks:
+        print(f"Generated {len(all_chunks)} chunks. Upserting to Qdrant...")
+        upsert_to_qdrant(all_chunks)
+    else:
+        print("No markdown content found or chunked.")
+
+if __name__ == "__main__":
+    main()
