@@ -26,6 +26,9 @@
       "type": "package",
       "name": "@docusaurus/theme-classic",
       "version": "3.9.2"
+    },
+    "custom-webpack-proxy-plugin": {
+      "type": "project"
     }
   }
 }
